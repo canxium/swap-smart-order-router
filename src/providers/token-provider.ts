@@ -538,11 +538,61 @@ export const WBTC_MOONBEAM = new Token(
   'Wrapped BTC bridged using Multichain'
 );
 
+//canxium tokens
+export const WCAU_CANXIUM = new Token(
+  ChainId.CANXIUM,
+  '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+  18,
+  'WCAU',
+  'Wrapped CAU'
+);
+
+export const WETH_CANXIUM = new Token(
+  ChainId.CANXIUM,
+  '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
+  18,
+  'WETH',
+  'Wrapped Ether'
+);
+
+export const USDC_CANXIUM = new Token(
+  ChainId.CANXIUM,
+  '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+  6,
+  'USDC',
+  'USD//C'
+);
+
+// canxium cerium
+export const WCAU_CANXIUM_CERIUM = new Token(
+  ChainId.CANXIUM_CERIUM,
+  '0x620969CB5486D4E9E3884E5106EfB4f7d31a76A8',
+  18,
+  'WCAU',
+  'Wrapped CAU'
+);
+
+export const WETH_CANXIUM_CERIUM = new Token(
+  ChainId.CANXIUM_CERIUM,
+  '0x0f1A32067147236422334c90Eb7933E634278056',
+  18,
+  'WETH',
+  'Wrapped Ether'
+);
+
+export const USDC_CANXIUM_CERIUM = new Token(
+  ChainId.CANXIUM_CERIUM,
+  '0x48BAb6E7D3f7aCD34ABCF42662E3C9F9769cb0Bf',
+  6,
+  'USDC',
+  'USD//C'
+);
+
 export class TokenProvider implements ITokenProvider {
   constructor(
     private chainId: ChainId,
     protected multicall2Provider: IMulticallProvider
-  ) {}
+  ) { }
 
   private async getTokenSymbol(
     addresses: string[],
@@ -687,10 +737,8 @@ export class TokenProvider implements ITokenProvider {
       }
 
       log.info(
-        `Got token symbol and decimals for ${
-          Object.values(addressToToken).length
-        } out of ${addresses.length} tokens on-chain ${
-          providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
+        `Got token symbol and decimals for ${Object.values(addressToToken).length
+        } out of ${addresses.length} tokens on-chain ${providerConfig ? `as of: ${providerConfig?.blockNumber}` : ''
         }`
       );
     }
@@ -795,6 +843,10 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_BASE;
     case ChainId.BASE_GOERLI:
       return USDC_BASE_GOERLI;
+    case ChainId.CANXIUM:
+      return USDC_CANXIUM;
+    case ChainId.CANXIUM_CERIUM:
+      return USDC_CANXIUM_CERIUM;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }
