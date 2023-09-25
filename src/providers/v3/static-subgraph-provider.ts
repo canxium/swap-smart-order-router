@@ -36,6 +36,8 @@ import {
   USDC_AVAX,
   USDC_BASE,
   USDC_BNB,
+  USDC_CANXIUM,
+  USDC_CANXIUM_CERIUM,
   USDC_ETHEREUM_GNOSIS,
   USDC_GOERLI,
   USDC_MAINNET,
@@ -57,6 +59,8 @@ import {
   WBTC_MOONBEAM,
   WBTC_OPTIMISM,
   WBTC_OPTIMISM_GOERLI,
+  WETH_CANXIUM,
+  WETH_CANXIUM_CERIUM,
   WETH_POLYGON,
   WMATIC_POLYGON,
   WMATIC_POLYGON_MUMBAI,
@@ -154,6 +158,8 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ],
   [ChainId.BASE_GOERLI]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE_GOERLI]],
   [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE], USDC_BASE],
+  [ChainId.CANXIUM]: [WRAPPED_NATIVE_CURRENCY[ChainId.CANXIUM], WETH_CANXIUM, USDC_CANXIUM],
+  [ChainId.CANXIUM_CERIUM]: [WRAPPED_NATIVE_CURRENCY[ChainId.CANXIUM_CERIUM], WETH_CANXIUM_CERIUM, USDC_CANXIUM_CERIUM],
 };
 
 /**
@@ -171,7 +177,7 @@ export class StaticV3SubgraphProvider implements IV3SubgraphProvider {
   constructor(
     private chainId: ChainId,
     private poolProvider: IV3PoolProvider
-  ) {}
+  ) { }
 
   public async getPools(
     tokenIn?: Token,
