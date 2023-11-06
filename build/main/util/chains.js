@@ -315,7 +315,7 @@ exports.WRAPPED_NATIVE_CURRENCY = {
     [sdk_core_1.ChainId.AVALANCHE]: new sdk_core_1.Token(sdk_core_1.ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX'),
     [sdk_core_1.ChainId.BASE]: new sdk_core_1.Token(sdk_core_1.ChainId.BASE, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped Ether'),
     [sdk_core_1.ChainId.BASE_GOERLI]: new sdk_core_1.Token(sdk_core_1.ChainId.BASE_GOERLI, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped Ether'),
-    [sdk_core_1.ChainId.CANXIUM]: new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WCAU', 'Wrapped CAU'),
+    [sdk_core_1.ChainId.CANXIUM]: new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0xA3A18968b3a5f5bd0872C58B1bC59481E4496d67', 18, 'WCAU', 'Wrapped CAU'),
     [sdk_core_1.ChainId.CANXIUM_CERIUM]: new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM_CERIUM, '0x620969CB5486D4E9E3884E5106EfB4f7d31a76A8', 18, 'WCAU', 'Wrapped CAU'),
 };
 function isMatic(chainId) {

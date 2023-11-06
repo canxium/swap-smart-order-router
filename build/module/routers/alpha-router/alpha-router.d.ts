@@ -2,7 +2,7 @@ import { BaseProvider } from '@ethersproject/providers';
 import { Protocol } from '@uniswap/router-sdk';
 import { ChainId, Currency, TradeType } from '@uniswap/sdk-core';
 import { Position } from '@uniswap/v3-sdk';
-import { IOnChainQuoteProvider, IRouteCachingProvider, ISwapRouterProvider, IV2QuoteProvider, IV2SubgraphProvider, Simulator, UniswapMulticallProvider } from '../../providers';
+import { CacheMode, IOnChainQuoteProvider, IRouteCachingProvider, ISwapRouterProvider, ITokenPropertiesProvider, IV2QuoteProvider, IV2SubgraphProvider, Simulator, UniswapMulticallProvider } from '../../providers';
 import { ITokenListProvider } from '../../providers/caching-token-list-provider';
 import { IGasPriceProvider } from '../../providers/gas-price-provider';
 import { ITokenProvider } from '../../providers/token-provider';
@@ -109,6 +109,10 @@ export declare type AlphaRouterParams = {
      * A provider for caching the best route given an amount, quoteToken, tradeType
      */
     routeCachingProvider?: IRouteCachingProvider;
+    /**
+     * A provider for getting token properties for special tokens like fee-on-transfer tokens.
+     */
+    tokenPropertiesProvider?: ITokenPropertiesProvider;
 };
 export declare class MapWithLowerCaseKey<V> extends Map<string, V> {
     set(key: string, value: V): this;
@@ -237,6 +241,10 @@ export declare type AlphaRouterConfig = {
      * Debug param that helps to see the short-term latencies improvements without impacting the main path.
      */
     debugRouting?: boolean;
+    /**
+     * Flag that allow us to override the cache mode.
+     */
+    overwriteCacheMode?: CacheMode;
 };
 export declare class AlphaRouter implements IRouter<AlphaRouterConfig>, ISwapToRatio<AlphaRouterConfig, SwapAndAddConfig> {
     protected chainId: ChainId;
@@ -262,7 +270,8 @@ export declare class AlphaRouter implements IRouter<AlphaRouterConfig>, ISwapToR
     protected v3Quoter: V3Quoter;
     protected mixedQuoter: MixedQuoter;
     protected routeCachingProvider?: IRouteCachingProvider;
-    constructor({ chainId, provider, multicall2Provider, v3PoolProvider, onChainQuoteProvider, v2PoolProvider, v2QuoteProvider, v2SubgraphProvider, tokenProvider, blockedTokenListProvider, v3SubgraphProvider, gasPriceProvider, v3GasModelFactory, v2GasModelFactory, mixedRouteGasModelFactory, swapRouterProvider, optimismGasDataProvider, tokenValidatorProvider, arbitrumGasDataProvider, simulator, routeCachingProvider, }: AlphaRouterParams);
+    protected tokenPropertiesProvider?: ITokenPropertiesProvider;
+    constructor({ chainId, provider, multicall2Provider, v3PoolProvider, onChainQuoteProvider, v2PoolProvider, v2QuoteProvider, v2SubgraphProvider, tokenProvider, blockedTokenListProvider, v3SubgraphProvider, gasPriceProvider, v3GasModelFactory, v2GasModelFactory, mixedRouteGasModelFactory, swapRouterProvider, optimismGasDataProvider, tokenValidatorProvider, arbitrumGasDataProvider, simulator, routeCachingProvider, tokenPropertiesProvider, }: AlphaRouterParams);
     routeToRatio(token0Balance: CurrencyAmount, token1Balance: CurrencyAmount, position: Position, swapAndAddConfig: SwapAndAddConfig, swapAndAddOptions?: SwapAndAddOptions, routingConfig?: Partial<AlphaRouterConfig>): Promise<SwapToRatioResponse>;
     /**
      * @inheritdoc IRouter

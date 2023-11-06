@@ -89,9 +89,9 @@ exports.WGLMR_MOONBEAM = new sdk_core_1.Token(sdk_core_1.ChainId.MOONBEAM, '0xAc
 exports.DAI_MOONBEAM = new sdk_core_1.Token(sdk_core_1.ChainId.MOONBEAM, '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b', 6, 'DAI', 'Dai on moonbeam bridged using Multichain');
 exports.WBTC_MOONBEAM = new sdk_core_1.Token(sdk_core_1.ChainId.MOONBEAM, '0x922D641a426DcFFaeF11680e5358F34d97d112E1', 8, 'WBTC', 'Wrapped BTC bridged using Multichain');
 //canxium tokens
-exports.WCAU_CANXIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WCAU', 'Wrapped CAU');
-exports.WETH_CANXIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619', 18, 'WETH', 'Wrapped Ether');
-exports.USDC_CANXIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 6, 'USDC', 'USD//C');
+exports.WCAU_CANXIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0xA3A18968b3a5f5bd0872C58B1bC59481E4496d67', 18, 'WCAU', 'Wrapped CAU');
+exports.WETH_CANXIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0xC93a6cd4FDe9f1Ff69DbEA4081c368804581BFBB', 18, 'WETH', 'Wrapped Ether');
+exports.USDC_CANXIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM, '0x275e916Ab1E93A6862a7b380751DdD87D6F66267', 6, 'USDC', 'USD//C');
 // canxium cerium
 exports.WCAU_CANXIUM_CERIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM_CERIUM, '0x620969CB5486D4E9E3884E5106EfB4f7d31a76A8', 18, 'WCAU', 'Wrapped CAU');
 exports.WETH_CANXIUM_CERIUM = new sdk_core_1.Token(sdk_core_1.ChainId.CANXIUM_CERIUM, '0x0f1A32067147236422334c90Eb7933E634278056', 18, 'WETH', 'Wrapped Ether');

@@ -118,7 +118,7 @@
     "commands": "./cli/commands"
   },
   "resolutions": {
-    "@uniswap/sdk-core": "git+https://github.com/canxium/swap-sdk-core.git#v0.0.1",
-    "@uniswap/universal-router-sdk": "git+https://github.com/canxium/universal-router-sdk.git#v0.0.1"
+    "@uniswap/sdk-core": "git+https://github.com/canxium/swap-sdk-core.git#v4.0.6-c1",
+    "@uniswap/universal-router-sdk": "git+https://github.com/canxium/universal-router-sdk.git#v1.5.7-c1"
   }
 }

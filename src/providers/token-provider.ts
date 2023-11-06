@@ -541,7 +541,7 @@ export const WBTC_MOONBEAM = new Token(
 //canxium tokens
 export const WCAU_CANXIUM = new Token(
   ChainId.CANXIUM,
-  '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+  '0xA3A18968b3a5f5bd0872C58B1bC59481E4496d67',
   18,
   'WCAU',
   'Wrapped CAU'
@@ -549,7 +549,7 @@ export const WCAU_CANXIUM = new Token(
 
 export const WETH_CANXIUM = new Token(
   ChainId.CANXIUM,
-  '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
+  '0xC93a6cd4FDe9f1Ff69DbEA4081c368804581BFBB',
   18,
   'WETH',
   'Wrapped Ether'
@@ -557,7 +557,7 @@ export const WETH_CANXIUM = new Token(
 
 export const USDC_CANXIUM = new Token(
   ChainId.CANXIUM,
-  '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
+  '0x275e916Ab1E93A6862a7b380751DdD87D6F66267',
   6,
   'USDC',
   'USD//C'

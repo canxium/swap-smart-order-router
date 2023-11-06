@@ -64,7 +64,7 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
   [ChainId.BASE]:
     'https://api.studio.thegraph.com/query/48211/uniswap-v3-base/version/latest',
   [ChainId.CANXIUM]:
-    'https://graph.canxium.net/subgraphs/name/canixum/canxium-v3-uniswap',
+    'https://graph.canxium.net/subgraphs/name/canixum/v3-swap',
   [ChainId.CANXIUM_CERIUM]:
     'https://cerium-graph.canxium.net/subgraphs/name/canixum/cerium-v3-uniswap',
 };

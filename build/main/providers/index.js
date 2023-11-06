@@ -19,6 +19,7 @@ __exportStar(require("./cache-node"), exports);
 __exportStar(require("./caching-gas-provider"), exports);
 __exportStar(require("./caching-token-list-provider"), exports);
 __exportStar(require("./caching-token-provider"), exports);
+__exportStar(require("./caching/route"), exports);
 __exportStar(require("./eip-1559-gas-price-provider"), exports);
 __exportStar(require("./eth-estimate-gas-provider"), exports);
 __exportStar(require("./eth-gas-station-info-gas-price-provider"), exports);
@@ -32,10 +33,10 @@ __exportStar(require("./simulation-provider"), exports);
 __exportStar(require("./static-gas-price-provider"), exports);
 __exportStar(require("./swap-router-provider"), exports);
 __exportStar(require("./tenderly-simulation-provider"), exports);
+__exportStar(require("./token-properties-provider"), exports);
 __exportStar(require("./token-provider"), exports);
 __exportStar(require("./token-validator-provider"), exports);
 __exportStar(require("./uri-subgraph-provider"), exports);
-__exportStar(require("./caching/route"), exports);
 __exportStar(require("./v2/caching-pool-provider"), exports);
 __exportStar(require("./v2/caching-subgraph-provider"), exports);
 __exportStar(require("./v2/pool-provider"), exports);
@@ -51,4 +52,4 @@ __exportStar(require("./v3/static-subgraph-provider"), exports);
 __exportStar(require("./v3/subgraph-provider"), exports);
 __exportStar(require("./v3/subgraph-provider-with-fallback"), exports);
 __exportStar(require("./v3/uri-subgraph-provider"), exports);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvcHJvdmlkZXJzL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSwwQ0FBd0I7QUFDeEIsK0NBQTZCO0FBQzdCLHlEQUF1QztBQUN2QyxnRUFBOEM7QUFDOUMsMkRBQXlDO0FBQ3pDLGdFQUE4QztBQUM5Qyw4REFBNEM7QUFDNUMsNEVBQTBEO0FBQzFELHVEQUFxQztBQUNyQyw4REFBNEM7QUFDNUMsdURBQXFDO0FBQ3JDLCtEQUE2QztBQUM3QyxnRUFBOEM7QUFDOUMsNERBQTBDO0FBQzFDLHdEQUFzQztBQUN0Qyw4REFBNEM7QUFDNUMseURBQXVDO0FBQ3ZDLGlFQUErQztBQUMvQyxtREFBaUM7QUFDakMsNkRBQTJDO0FBQzNDLDBEQUF3QztBQUN4QyxrREFBZ0M7QUFDaEMsNkRBQTJDO0FBQzNDLGlFQUErQztBQUMvQyxxREFBbUM7QUFDbkMsc0RBQW9DO0FBQ3BDLGdFQUE4QztBQUM5Qyx5REFBdUM7QUFDdkMsdUVBQXFEO0FBQ3JELDZEQUEyQztBQUMzQyw2REFBMkM7QUFDM0MsaUVBQStDO0FBQy9DLHFEQUFtQztBQUNuQyxnRUFBOEM7QUFDOUMseURBQXVDO0FBQ3ZDLHVFQUFxRDtBQUNyRCw2REFBMkMifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvcHJvdmlkZXJzL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSwwQ0FBd0I7QUFDeEIsK0NBQTZCO0FBQzdCLHlEQUF1QztBQUN2QyxnRUFBOEM7QUFDOUMsMkRBQXlDO0FBQ3pDLGtEQUFnQztBQUNoQyxnRUFBOEM7QUFDOUMsOERBQTRDO0FBQzVDLDRFQUEwRDtBQUMxRCx1REFBcUM7QUFDckMsOERBQTRDO0FBQzVDLHVEQUFxQztBQUNyQywrREFBNkM7QUFDN0MsZ0VBQThDO0FBQzlDLDREQUEwQztBQUMxQyx3REFBc0M7QUFDdEMsOERBQTRDO0FBQzVDLHlEQUF1QztBQUN2QyxpRUFBK0M7QUFDL0MsOERBQTRDO0FBQzVDLG1EQUFpQztBQUNqQyw2REFBMkM7QUFDM0MsMERBQXdDO0FBQ3hDLDZEQUEyQztBQUMzQyxpRUFBK0M7QUFDL0MscURBQW1DO0FBQ25DLHNEQUFvQztBQUNwQyxnRUFBOEM7QUFDOUMseURBQXVDO0FBQ3ZDLHVFQUFxRDtBQUNyRCw2REFBMkM7QUFDM0MsNkRBQTJDO0FBQzNDLGlFQUErQztBQUMvQyxxREFBbUM7QUFDbkMsZ0VBQThDO0FBQzlDLHlEQUF1QztBQUN2Qyx1RUFBcUQ7QUFDckQsNkRBQTJDIn0=

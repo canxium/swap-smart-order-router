@@ -428,7 +428,7 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
   ),
   [ChainId.CANXIUM]: new Token(
     ChainId.CANXIUM,
-    '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270',
+    '0xA3A18968b3a5f5bd0872C58B1bC59481E4496d67',
     18,
     'WCAU',
     'Wrapped CAU'

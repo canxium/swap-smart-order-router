@@ -1728,9 +1728,9 @@
     "@uniswap/v2-sdk" "^3.2.0"
     "@uniswap/v3-sdk" "^3.10.0"
 
-"@uniswap/sdk-core@4.0.6", "@uniswap/sdk-core@^4", "@uniswap/sdk-core@^4.0.0", "@uniswap/sdk-core@^4.0.2", "@uniswap/sdk-core@git+https://github.com/canxium/swap-sdk-core.git#v0.0.1":
+"@uniswap/sdk-core@4.0.6", "@uniswap/sdk-core@^4", "@uniswap/sdk-core@^4.0.0", "@uniswap/sdk-core@^4.0.2", "@uniswap/sdk-core@git+https://github.com/canxium/swap-sdk-core.git#v4.0.6-c1":
   version "4.0.6"
-  resolved "git+https://github.com/canxium/swap-sdk-core.git#f8fc71e3ccc185c645b7a157db429d9b17a65cb9"
+  resolved "git+https://github.com/canxium/swap-sdk-core.git#0a588327202a0edb9eeea6cc7426a15d87693a0d"
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
@@ -1767,9 +1767,9 @@
   resolved "https://registry.yarnpkg.com/@uniswap/token-lists/-/token-lists-1.0.0-beta.31.tgz#ff3852bd505ec7b4c276625c762ea79a93a919ec"
   integrity sha512-BQVoelKCRf64IToPEs1wxiXOnhr/ukwPOF78XG11PrTAOL4F8umjYKFb8ZPv1/dIJsPaC7GhLSriEqyp94SasQ==
 
-"@uniswap/universal-router-sdk@^1.5.7", "@uniswap/universal-router-sdk@git+https://github.com/canxium/universal-router-sdk.git#v0.0.1":
+"@uniswap/universal-router-sdk@^1.5.7", "@uniswap/universal-router-sdk@git+https://github.com/canxium/universal-router-sdk.git#v1.5.7-c1":
   version "1.5.7"
-  resolved "git+ssh://git@github.com/canximan/universal-router-sdk.git#eb7cd621cae5e231166eaa0c3faa89e3f2927c56"
+  resolved "git+https://github.com/canxium/universal-router-sdk.git#58cc567c2acb130452a0925df71c7396412b35cb"
   dependencies:
     "@uniswap/permit2-sdk" "^1.2.0"
     "@uniswap/router-sdk" "^1.6.0"
